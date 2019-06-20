@@ -1,5 +1,8 @@
 /* global */
-
+body {
+  padding: 40px 0;
+  background: #f0f0f0;
+}
 .browser-container {
 	height: 100vh;
 }
@@ -8,6 +11,22 @@
 	height: 768px;
 	background: #23252d;
 }
+
+/* header navigation */
+.main-nav {
+  height: 44px;
+}
+.nav-logo {
+  font-size: 20px;
+}
+.nav-logo span {
+  color: #25c2e2;
+}
+.main-nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  width: 290px;
+}
+
 
 /* login */
 .login-container {
