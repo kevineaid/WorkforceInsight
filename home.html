@@ -16,17 +16,96 @@
 			<div class="main-nav d-flex justify-content-center align-items-center">
 				<h1 class="nav-logo text-white">Workforce<span>Insight</span></h1>
 				<!-- nav button -->
-				<button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+				<button class="navbar-toggler navbar-btn" id="navbar-btn-toggle" type="button" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 			  	</button>
 				<!-- end of nav button -->
 			</div>
 			<!-- end of navbar -->
-			<div class="main-container d-flex align-items-center justify-content-center flex-column">
-				
+			<!-- sidebar nav -->
+			<div id="side-nav" class="sidebar-nav d-flex flex-column">
+			  	<div class="logo text-center">
+					<img src="img/logo@3x.png" alt="" class="logo-img">
+					<h1 class="logo-text text-white">Workforce<span>Insight</span></h1>
+				</div>
+				<ul class="sidebar-nav-ul">
+					<li class="active">
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-home@3x.png">
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-department@3x.png" style="fill: red;">
+							<span>Department Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-employee@3x.png" style="fill: red;">
+							<span>Employee Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-station@3x.png" style="fill: red;">
+							<span>Station Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-product@3x.png" style="fill: red;">
+							<span>Product Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-product@3x.png" style="fill: red;">
+							<span>Product Part Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-profile@3x.png" style="fill: red;">
+							<span>My Profile</span>
+						</a>
+					</li>
+				</ul>
+				<div class="sidebar-footer">
+					<hr>
+					<div>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-logout@3x.png">
+							<span>Log out</span>
+						</a>
+					</div>
+				</div>	
 			</div>
+			<!-- end of sidebar nav -->
+
+			<!-- main container -->
+			<div class="main-container d-flex align-items-center justify-content-center flex-column">
+				<div class="scan-btn-container">
+					<button class="scan-btn" id="scan-btn"></button>
+					<p class="mx-auto">Please prepare the barcode and scan using scan button above to start analyzing</p>
+				</div>
+				<div class="scan-popup-container" id="scan-popup">
+					<div class="scan-popup text-center text-white">
+						<img src="img/check@3x.png" alt="">
+						<h2>Scanning Successful</h2>
+						<p class="mx-auto">The analytics data is successfully scanned. You can now view the analytic results.</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
+
+
+	<!-- import javascript -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript" src="js/main.js"></script>	
 	
 </body>
 </html>
