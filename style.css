@@ -19,9 +19,10 @@ body {
   height: 70px;
 }
 .nav-logo {
-  font-size: 23px;
+  font-size: 21px;
   line-height: 36px;
-  margin-top: 15px;
+  margin-top: 21px;
+  font-weight: 600;
 }
 .nav-logo span {
   color: #25c2e2;
@@ -251,6 +252,7 @@ body {
   background-size: 100%;
   margin-bottom: 46px;
   margin-top: 66px;
+  border-radius: 500px;
 }
 .scan-btn:hover {
   cursor: pointer;
@@ -298,4 +300,205 @@ body {
 .scan-popup p {
   width: 245px;
   font-size: 15px;
+}
+
+/* scan result page */
+.result-tabs {
+  width: 100%;
+  display: table;
+  border-bottom: 3px solid rgba(86,86,86, 0.5);
+}
+.result-tabs li {
+  display: table-cell;
+  text-align: center;
+  position: relative;
+}
+.result-tabs .nav-link.active,
+.result-tabs .nav-item.show .nav-link {
+  color: #fff;
+  background: none;
+  border: none; 
+}
+.result-tabs li a {
+  font-size: 14px;
+  opacity: 0.5;
+  color: #fff;
+  padding: 13px 0;
+}
+.result-tabs li a.active {
+  font-weight: 600;
+  opacity: 1;
+}
+.result-tabs li a.active::after {
+  content: ' ';
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(92deg, #38dbb1, #1fbbf0);;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.result-content .tab-pane{
+  padding: 0 22px;
+  padding-top: 26px;
+}
+
+/* select menu dropdown */
+.input-box {
+  position: relative;
+  height: 52px;
+}
+.input-label {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  font-size: 11px;
+  opacity: 0.6;
+  left: 19px;
+  top: 9px;
+}
+
+.nice-select {
+  background: #2f3449;
+  border: none;
+  border: 1px solid #424d7a;
+  padding-top: 12px;
+  height: 52px;
+  min-width: 111px;
+}
+.nice-select::after {
+  background-image: url(img/shape.png);
+  width: 11px;
+  height: 6px;
+  border: none;
+  transform: inherit;
+}
+.nice-select .current {
+  color: #fff;
+}
+.input-box.full-width .nice-select {
+  width: 100%;
+}
+
+.employee-list {
+  padding: 0 6px !important;
+  display: block;
+}
+.employee-list a:hover{
+  text-decoration: none;
+}
+.employee-list li{
+  padding: 13px 0px;
+  border-bottom: 1px solid #565656;
+  position: relative;
+}
+.employee-list li::after {
+  position: absolute;
+  right: 4px;
+  bottom: 25px;
+  content: ' ';
+  background-image: url(img/shape.png);
+  width: 11px;
+  height: 6px;
+  border: none;
+  transform: rotate(-90deg);
+}
+.employee-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.employee-title {
+  font-size: 12px;
+  opacity: 0.65;
+  padding-left: 2px;
+  margin-top: -3px;
+}
+
+
+/* employee detail page */
+.employee-profile {
+  padding: 19px 5px;
+  background-color: #283040;
+} 
+.profile-img {
+  width: 64px;
+  border-radius: 50px;
+  padding: 0 19px;
+  width: 103px;
+  overflow: hidden;
+}
+.profile-detail {
+  padding-top: 3px;
+}
+.profile-detail h2 {
+  font-size: 17px;
+  font-weight: 600;
+}
+.profile-detail .title {
+  font-size: 14px;
+  opacity: 0.65;
+  margin-bottom: 2px;
+}
+.profile-detail .email {
+  color: #28c7d9;
+  letter-spacing: -.2px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* input date */
+.date-input {
+  padding: 19px 20px;
+}
+.date-box {
+  background: #2f3449;
+  border: none;
+  border: 1px solid #424d7a;
+  padding-top: 12px;
+  height: 52px;
+  min-width: 111px;
+  position: relative;
+  padding-left: 19px;
+  width: 159px;
+  border-radius: 4px;
+}
+.date-box-sm {
+  width: 121px;
+}
+.date-box label {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  font-size: 11px;
+  opacity: 0.6;
+  left: 19px;
+  top: 9px;
+}
+.date-box input[type="text"] {
+  background: transparent;
+  color: #fff;
+  border-bottom: none;
+  font-size: 14px;
+  margin-top: -3px;
+}
+.date-box::after {
+  position: absolute;
+  right: 19px;
+  bottom: 25px;
+  content: ' ';
+  background-image: url(img/shape.png);
+  width: 11px;
+  height: 6px;
+  border: none;
+}
+
+
+/* content */
+.content {
+  padding-left: 24px;
+}
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
 }

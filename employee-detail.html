@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Workforce Insight</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/materialize.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,11 +16,11 @@
 		<div class="mobile-container">
 			<!-- navbar -->
 			<div class="main-nav d-flex justify-content-center align-items-center">
-				<h1 class="nav-logo text-white">Workforce<span>Insight</span></h1>
+				<h1 class="nav-logo text-white">Employee Details</h1>
 				<!-- nav button -->
-				<button class="navbar-toggler navbar-btn" id="navbar-btn-toggle" type="button" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-			  	</button>
+				<a href="employee-list.html" class="navbar-toggler navbar-btn" id="navbar-btn-toggle">
+				    <img src="img/61-interface-arrow-left.png" alt="">
+			  	</a>
 				<!-- end of nav button -->
 			</div>
 			<!-- end of navbar -->
@@ -85,19 +87,40 @@
 			<!-- end of sidebar nav -->
 
 			<!-- main container -->
-			<div class="main-container d-flex align-items-center justify-content-center flex-column">
-				<div class="scan-btn-container">
-					<button class="scan-btn" id="scan-btn"></button>
-					<p class="mx-auto">Please prepare the barcode and scan using scan button above to start analyzing</p>
+			<div class="main-container">
+				<div class="employee-profile d-flex">
+					<div class="profile-img">
+						<img src="img/group-4.png" alt="">
+					</div>
+					<div class="profile-detail text-white">
+						<h2 class="m-0">Mahesh Pujari</h2>
+						<p class="title">
+							Graphic Designer
+						</p>
+						<p class="email">
+							mahesh@inceptasolutions.com
+						</p>
+					</div>
 				</div>
-				<div class="scan-popup-container" id="scan-popup">
-					<a href="scan-result.html">
-						<div class="scan-popup text-center text-white">
-							<img src="img/check@3x.png" alt="">
-							<h2>Scanning Successful</h2>
-							<p class="mx-auto">The analytics data is successfully scanned. You can now view the analytic results.</p>
-						</div>
-					</a>
+				<div class="d-flex justify-content-between date-input">
+	               	<div class="input-date-box" id="datetimepicker1" data-target-input="nearest">
+	               		<div class="date-box" data-target="#datetimepicker1" data-toggle="datetimepicker">
+		               		<label >From</label>
+		               		<input type="text" class="text-white" data-target="#datetimepicker1" value="22/6/2019">
+	               		</div>
+	               	</div>
+	               	<div class="input-date-box" id="datetimepicker2" data-target-input="nearest">
+	               		<div class="date-box" data-target="#datetimepicker2" data-toggle="datetimepicker">
+		               		<label >To</label>
+		               		<input type="text" class="text-white" data-target="#datetimepicker2" value="22/6/2019">
+	               		</div>	               		
+	               	</div>
+				</div>
+				<div class="content">
+					<h4 class="section-title m-0">Working Percentage</h4>
+					<br><br><br><br><br><br>
+					<br><br><br><br><br><br>
+					<h4 class="section-title m-0">Recent Working Time</h4>
 				</div>
 			</div>
 
@@ -107,6 +130,14 @@
 
 	<!-- import javascript -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript" src="js/popper.min.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+	<script type="text/javascript" src="js/moment.js"></script>	
+	<script type="text/javascript" src="js/jquery.nice-select.js"></script>	
+	<script type="text/javascript" src="js/materialize.js"></script>	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
 	<script type="text/javascript" src="js/main.js"></script>	
 	
 </body>

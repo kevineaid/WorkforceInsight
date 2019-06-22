@@ -22,4 +22,19 @@ $( document ).ready(function() {
 			$('#scan-popup').fadeIn();
 		}, 300);
   	});
+
+  	/*nice select*/
+  	 $('select').niceSelect();
+
+  	$(function () {
+        $('#datetimepicker1').datetimepicker({
+        	format: 'L'
+        });
+        $('#datetimepicker2').datetimepicker({
+        	format: 'L'
+        });
+
+    });
+
+
 });
