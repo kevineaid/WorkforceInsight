@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -118,9 +119,11 @@
 				</div>
 				<div class="content">
 					<h4 class="section-title m-0">Working Percentage</h4>
-					<br><br><br><br><br><br>
-					<br><br><br><br><br><br>
+					
 					<h4 class="section-title m-0">Recent Working Time</h4>
+					<div class="time-chart">
+						<canvas id="cv-time-chart" width="346" height="282"></canvas>
+					</div>
 				</div>
 			</div>
 
@@ -138,7 +141,8 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
 
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
-	<script type="text/javascript" src="js/main.js"></script>	
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	
 </body>
 </html>

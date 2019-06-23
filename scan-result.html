@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -102,29 +103,51 @@
 
 				  <!-- Tab panes -->
 			  	<div class="tab-content result-content">
-				    <div id="TimeSummary" class="tab-pane d-flex flex-row active">
-				    	<div class="input-box mr-2">
-							<label class="input-label">Department</label>
-						    <select>
-						      <option value="" selected>Design</option>
-						      <option value="1">Option 1</option>
-						      <option value="2">Option 2</option>
-						      <option value="3">Option 3</option>
-						    </select>
-					  	</div>
-					  	<div class="input-date-box mr-2 ml-1" id="datetimepicker1" data-target-input="nearest">
-		               		<div class="date-box date-box-sm" data-target="#datetimepicker1" data-toggle="datetimepicker">
-			               		<label >From</label>
-			               		<input type="text" class="text-white" data-target="#datetimepicker1" value="22/6/2019">
-		               		</div>	               		
-		               	</div>
-		               	<div class="input-date-box ml-1" id="datetimepicker2" data-target-input="nearest">
-		               		<div class="date-box date-box-sm" data-target="#datetimepicker2" data-toggle="datetimepicker">
-			               		<label >To</label>
-			               		<input type="text" class="text-white" data-target="#datetimepicker2" value="22/6/2019">
-		               		</div>	               		
-		               	</div>
+				    <div id="TimeSummary" class="tab-pane active">
+				    	<div class=" d-flex flex-row">
+				    		<div class="input-box mr-2">
+								<label class="input-label">Department</label>
+							    <select>
+							      <option value="" selected>Design</option>
+							      <option value="1">Option 1</option>
+							      <option value="2">Option 2</option>
+							      <option value="3">Option 3</option>
+							    </select>
+						  	</div>
+						  	<div class="input-date-box mr-2 ml-1" id="datetimepicker1" data-target-input="nearest">
+			               		<div class="date-box date-box-sm" data-target="#datetimepicker1" data-toggle="datetimepicker">
+				               		<label >From</label>
+				               		<input type="text" class="text-white" data-target="#datetimepicker1" value="22/6/2019">
+			               		</div>	               		
+			               	</div>
+			               	<div class="input-date-box ml-1" id="datetimepicker2" data-target-input="nearest">
+			               		<div class="date-box date-box-sm" data-target="#datetimepicker2" data-toggle="datetimepicker">
+				               		<label >To</label>
+				               		<input type="text" class="text-white" data-target="#datetimepicker2" value="22/6/2019">
+			               		</div>	               		
+			               	</div>
+				    	</div>
+				    	
+						
+						<div class="time-chart">
+							<canvas id="cv-time-chart" width="346" height="282"></canvas>
+						</div>
 
+						<div class="cat-chart">
+							<div class="d-flex flex-row">
+								<div class="category-legend text-white">
+									<ul>
+										<li><span style="background: #1e5f6f;"></span>Business Card</li>
+										<li><span style="background: #49bdca;"></span>Website Design</li>
+										<li><span style="background: #ffffff;"></span>Company Profile</li>
+										<li><span style="background: #00fff9;"></span>Digital Marketing</li>
+									</ul>
+								</div>
+								<div>
+									<canvas id="cv-cat-chart" width="170" height="170"></canvas>
+								</div>
+							</div>
+						</div>
 				    </div>
 				    <div id="Variance" class="tab-pane fade">
 				    </div>
@@ -147,6 +170,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
 
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>	
 	
 	
