@@ -501,12 +501,29 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  margin: 0;
+  margin-bottom: 13px !important;
 }
 
 /* chart content */
 .time-chart {
   margin-top: 16px;
   margin-bottom: 35px;
+}
+.employee-task-legend ul li{
+  font-size: 14px;
+  display: inline-block;
+  margin: 6.5px 0;
+  margin-top: 0;
+  margin-right: 18px;
+}
+.employee-task-legend ul li span{
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  margin-bottom: -4px;
+  margin-right: 12px;
 }
 
 /* pie chart */
