@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Workforce Insight</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="browser-container d-flex justify-content-center align-items-center">
+		<div class="mobile-container">
+			<!-- navbar -->
+			<div class="main-nav d-flex justify-content-center align-items-center">
+				<h1 class="nav-logo text-white">Analytic Results</h1>
+				<!-- nav button -->
+				<a href="home.html" class="navbar-toggler navbar-btn" id="navbar-btn-toggle">
+				    <img src="img/61-interface-arrow-left.png" alt="">
+			  	</a>
+				<!-- end of nav button -->
+			</div>
+			<!-- end of navbar -->
+			<!-- sidebar nav -->
+			<div id="side-nav" class="sidebar-nav d-flex flex-column">
+			  	<div class="logo text-center">
+					<img src="img/logo@3x.png" alt="" class="logo-img">
+					<h1 class="logo-text text-white">Workforce<span>Insight</span></h1>
+				</div>
+				<ul class="sidebar-nav-ul">
+					<li class="active">
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-home@3x.png">
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-department@3x.png" style="fill: red;">
+							<span>Department Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-employee@3x.png" style="fill: red;">
+							<span>Employee Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-station@3x.png" style="fill: red;">
+							<span>Station Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-product@3x.png" style="fill: red;">
+							<span>Product Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-product@3x.png" style="fill: red;">
+							<span>Product Part Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-profile@3x.png" style="fill: red;">
+							<span>My Profile</span>
+						</a>
+					</li>
+				</ul>
+				<div class="sidebar-footer">
+					<hr>
+					<div>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-logout@3x.png">
+							<span>Log out</span>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<!-- end of sidebar nav -->
+
+			<!-- main container -->
+			<div class="main-container">
+				<ul class="nav nav-tabs result-tabs" role="tablist">
+				    <li class="nav-item">
+				      <a class="nav-link active" href="scan-result.html">Time Summary</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link" data-toggle="tab" href="#Variance">Variance</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link" href="employee-list.html">Employee List</a>
+				    </li>
+			  	</ul>
+
+				  <!-- Tab panes -->
+			  	<div class="tab-content result-content">
+				    <div id="TimeSummary" class="tab-pane active">
+				    	<div class=" d-flex flex-row">
+				    		<div class="input-box mr-2">
+								<label class="input-label">Department</label>
+							    <select>
+							      <option value="" selected>Design</option>
+							      <option value="1">Option 1</option>
+							      <option value="2">Option 2</option>
+							      <option value="3">Option 3</option>
+							    </select>
+						  	</div>
+						  	<div class="input-date-box mr-2 ml-1" id="datetimepicker1" data-target-input="nearest">
+			               		<div class="date-box date-box-sm" data-target="#datetimepicker1" data-toggle="datetimepicker">
+				               		<label >From</label>
+				               		<input type="text" class="text-white" data-target="#datetimepicker1" value="22/6/2019">
+			               		</div>	               		
+			               	</div>
+			               	<div class="input-date-box ml-1" id="datetimepicker2" data-target-input="nearest">
+			               		<div class="date-box date-box-sm" data-target="#datetimepicker2" data-toggle="datetimepicker">
+				               		<label >To</label>
+				               		<input type="text" class="text-white" data-target="#datetimepicker2" value="22/6/2019">
+			               		</div>	               		
+			               	</div>
+				    	</div>
+				    	
+						
+						<div class="time-chart">
+							<canvas id="cv-time-chart" width="346" height="282"></canvas>
+						</div>
+
+						<div class="cat-chart">
+							<div class="d-flex flex-row">
+								<div class="category-legend text-white">
+									<ul>
+										<li><span style="background: #1e5f6f;"></span>Business Card</li>
+										<li><span style="background: #49bdca;"></span>Website Design</li>
+										<li><span style="background: #ffffff;"></span>Company Profile</li>
+										<li><span style="background: #00fff9;"></span>Digital Marketing</li>
+									</ul>
+								</div>
+								<div>
+									<canvas id="cv-cat-chart" width="170" height="170"></canvas>
+								</div>
+							</div>
+						</div>
+				    </div>
+				    <div id="Variance" class="tab-pane fade">
+				    </div>
+				    <div id="EmployeeList" class="tab-pane">
+				    </div>
+			  	</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- import javascript -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript" src="js/popper.min.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+	<script type="text/javascript" src="js/moment.js"></script>	
+	<script type="text/javascript" src="js/jquery.nice-select.js"></script>	
+	<script type="text/javascript" src="js/materialize.js"></script>	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>	
+	
+	
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Workforce Insight</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="browser-container d-flex justify-content-center align-items-center">
+		<div class="mobile-container">
+			<!-- navbar -->
+			<div class="main-nav d-flex justify-content-center align-items-center">
+				<h1 class="nav-logo text-white">Analytic Results</h1>
+				<!-- nav button -->
+				<a href="home.html" class="navbar-toggler navbar-btn" id="navbar-btn-toggle">
+				    <img src="img/61-interface-arrow-left.png" alt="">
+			  	</a>
+				<!-- end of nav button -->
+			</div>
+			<!-- end of navbar -->
+			<!-- sidebar nav -->
+			<div id="side-nav" class="sidebar-nav d-flex flex-column">
+			  	<div class="logo text-center">
+					<img src="img/logo@3x.png" alt="" class="logo-img">
+					<h1 class="logo-text text-white">Workforce<span>Insight</span></h1>
+				</div>
+				<ul class="sidebar-nav-ul">
+					<li class="active">
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-home@3x.png">
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-department@3x.png" style="fill: red;">
+							<span>Department Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-employee@3x.png" style="fill: red;">
+							<span>Employee Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-station@3x.png" style="fill: red;">
+							<span>Station Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-product@3x.png" style="fill: red;">
+							<span>Product Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-product@3x.png" style="fill: red;">
+							<span>Product Part Metrics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-profile@3x.png" style="fill: red;">
+							<span>My Profile</span>
+						</a>
+					</li>
+				</ul>
+				<div class="sidebar-footer">
+					<hr>
+					<div>
+						<a href="#" class="d-flex align-items-center">
+							<img src="img/icon/icon-logout@3x.png">
+							<span>Log out</span>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<!-- end of sidebar nav -->
+
+			<!-- main container -->
+			<div class="main-container">
+				<ul class="nav nav-tabs result-tabs" role="tablist">
+				    <li class="nav-item">
+				      <a class="nav-link" href="scan-result.html">Time Summary</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link" data-toggle="tab" href="#Variance">Variance</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link active" href="employee-list.html">Employee List</a>
+				    </li>
+			  	</ul>
+
+				  <!-- Tab panes -->
+			  	<div class="tab-content result-content">
+				    <div id="TimeSummary" class="tab-pane fade">
+				    	<div class="input-box">
+							<label class="input-label">Department</label>
+						    <select>
+						      <option value="" disabled selected>Option 1</option>
+						      <option value="1">x</option>
+						      <option value="2">Option 2 hahaha</option>
+						      <option value="3">Option 3</option>
+						    </select>
+					  	</div>
+
+				      	<h3>HOME</h3>
+				      	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				    </div>
+				    <div id="Variance" class="tab-pane fade">
+				      	<h3>Menu 1</h3>
+				      	<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				    </div>
+				    <div id="EmployeeList" class="tab-pane active">
+				      	<div class="input-box full-width">
+							<label class="input-label">Department</label>
+						    <select>
+						      <option value="" selected>Design</option>
+						      <option value="1">Option 1</option>
+						      <option value="2">Option 2</option>
+						      <option value="3">Option 3</option>
+						    </select>
+					  	</div>
+					  	<ul class="employee-list mx-auto">
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">1. Mahesh Pujari</p>
+						  			<p class="employee-title mb-0">Graphic Designer</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">2. Michael Bloom</p>
+						  			<p class="employee-title mb-0">Print Designer</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">3. Mat Blanc</p>
+						  			<p class="employee-title mb-0">Art Director</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">4. Jyoti Chouldri</p>
+						  			<p class="employee-title mb-0">Lead Designer</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">5. Sanket Morey</p>
+						  			<p class="employee-title mb-0">Graphic Designer</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">6. Johmy Dambada</p>
+						  			<p class="employee-title mb-0">Illustrator</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">7. Layla Abigail</p>
+						  			<p class="employee-title mb-0">Junior Designer</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">8. Mark de Shaun</p>
+						  			<p class="employee-title mb-0">Graphic Designer</p>
+					  			</a>
+					  		</li>
+					  		<li>
+					  			<a href="employee-detail.html" class="text-white">
+						  			<p class="employee-name m-0">9. Samuel Choo</p>
+						  			<p class="employee-title mb-0">Creative Director</p>
+					  			</a>
+					  		</li>
+					  	</ul>
+				    </div>
+			  	</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- import javascript -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript" src="js/popper.min.js"></script>	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.nice-select.js"></script>	
+	<script type="text/javascript" src="js/materialize.js"></script>	
+	<script type="text/javascript" src="js/main.js"></script>	
+	
+</body>
+</html>
