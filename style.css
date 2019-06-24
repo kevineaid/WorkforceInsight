@@ -356,9 +356,9 @@ body {
 
 /* filter box */
 .filter-box {
-  height: 128px;
+  height: 128px; /* ngetest */
   width: 100%;
-  overflow-y: visible;
+  overflow-y: visible; /* sudah di visible tp ttep kepotong */
   overflow-x: scroll;
 }
 .filter-box::-webkit-scrollbar {
