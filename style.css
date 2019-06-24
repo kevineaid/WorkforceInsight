@@ -356,6 +356,10 @@ body {
 
 /* filter box */
 .filter-box {
+  height: 128px;
+  width: 100%;
+  overflow-y: visible;
+  overflow-x: scroll;
 }
 .filter-box::-webkit-scrollbar {
     width: 0px;
