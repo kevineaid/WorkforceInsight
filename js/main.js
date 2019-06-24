@@ -20,7 +20,16 @@ $( document ).ready(function() {
 	$('#scan-btn').click(function(e) {
 		setTimeout(function(){
 			$('#scan-popup').fadeIn();
-		}, 300);
+		}, 200);
+  	});
+
+  	$('#popup-link').click(function(e){
+		e.preventDefault();
+		$('#scan-popup').fadeOut();
+      	var self = document.getElementById('popup-link');
+      	setTimeout(function() {
+          	window.location.href = self.href;
+      	}, 600);
   	});
 
   	/*nice select*/

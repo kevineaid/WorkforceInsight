@@ -12,6 +12,7 @@ body {
 	background: #23252d;
   position: relative;
   overflow-x: hidden;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 375px){
   .mobile-container {
@@ -26,7 +27,7 @@ body {
 .nav-logo {
   font-size: 21px;
   line-height: 36px;
-  margin-top: 21px;
+  margin-top: 9px;
   font-weight: 600;
 }
 .nav-logo span {
@@ -42,6 +43,9 @@ body {
   top: 17px;
   transition: all 0.3s linear;
 }
+.main-nav .navbar-btn img {
+  width: 10px;
+}
 .main-nav .navbar-btn:focus {
   outline:0;
 }
@@ -51,6 +55,8 @@ body {
 .main-nav .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h20M4 16h20M4 24h20'/%3E%3C/svg%3E");
   width: 25px;
+  margin-left: -4px;
+  margin-top: -2px;
 }
 
 /* sidebar nav */
@@ -348,6 +354,14 @@ body {
   padding-top: 26px;
 }
 
+/* filter box */
+.filter-box {
+}
+.filter-box::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 /* select menu dropdown */
 .input-box {
   position: relative;
@@ -383,6 +397,11 @@ body {
 }
 .input-box.full-width .nice-select {
   width: 100%;
+}
+.nice-select.open:after {
+  -webkit-transform: rotate(-180deg) translate(2px, 2px);
+  -ms-transform: rotate(-180deg) translate(2px, 2px);
+  transform: rotate(-180deg) translate(2px, 2px);
 }
 
 .employee-list {
@@ -482,9 +501,13 @@ body {
 .date-box input[type="text"] {
   background: transparent;
   color: #fff;
-  border-bottom: none;
-  font-size: 14px;
-  margin-top: -3px;
+  font-size: 13px;
+  margin-top: 9px;
+  padding-left: 2px;
+  border:none;
+}
+.date-box input[type="text"]:focus {
+  outline: none;
 }
 .date-box::after {
   position: absolute;
@@ -495,6 +518,9 @@ body {
   width: 11px;
   height: 6px;
   border: none;
+}
+.date-input .date-box {
+  width: 165px;
 }
 
 
