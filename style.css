@@ -3,6 +3,39 @@ body {
 /*  padding: 40px 0;*/
   background: #f0f0f0;
 }
+
+/* import font */
+@font-face {
+    font-family: "InterUI";
+    src: url("fonts/Inter/Inter-Regular.woff") format('woff');
+    src: url("fonts/Inter/Inter-Regular.woff2") format('woff2');
+}
+@font-face {
+    font-family: "InterUI-Light";
+    src: url("fonts/Inter/Inter-Light-BETA.woff") format('woff');
+    src: url("fonts/Inter/Inter-Light-BETA.woff2") format('woff2');
+    font-weight: 300;
+}
+@font-face {
+    font-family: "InterUI-Medium";
+    src: url("fonts/Inter/Inter-Medium.woff") format('woff');
+    src: url("fonts/Inter/Inter-Medium.woff2") format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "InterUI-SemiBold";
+    src: url("fonts/Inter/Inter-SemiBold.woff") format('woff');
+    src: url("fonts/Inter/Inter-SemiBold.woff2") format('woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: "InterUI-SemiBold";
+    src: url("fonts/Inter/Inter-Bold.woff") format('woff');
+    src: url("fonts/Inter/Inter-Bold.woff2") format('woff2');
+    font-weight: 700;
+}
+
+
 .browser-container {
 /*	height: 100vh;*/
 }
@@ -13,10 +46,29 @@ body {
   position: relative;
   overflow-x: hidden;
   padding-bottom: 30px;
+  font-family: "InterUI", sans-serif;
 }
-@media screen and (min-width: 375px){
+@media screen and (min-width: 320px){
   .mobile-container {
-    max-width: 400px;
+    max-width: 100%;
+    height: calc(100vh - 30px);
+  }  
+}
+
+@media screen and (min-width: 768px){
+  .mobile-container {
+    max-width: 750px;
+    height: 768px;
+  }  
+}
+@media screen and (min-width: 992px){
+  .mobile-container {
+    max-width: 970px;
+  }  
+}
+@media screen and (min-width: 1200px){
+  .mobile-container {
+    max-width: 1170px;
   }  
 }
 
@@ -34,7 +86,7 @@ body {
   color: #25c2e2;
 }
 .main-nav {
-  width: 375px;
+  width: 100%;
   padding: 10px 0;
 }
 .main-nav .navbar-btn {
@@ -141,12 +193,17 @@ body {
 
 /* login */
 .login-container {
-	height: 768px;
+	height: 100vh;
 }
 .login-container .logo-img {
 	width: 90px;
 	margin-top: 100px;
 }
+/* splash */
+.splash .logo-img {
+  margin-top: 0;
+}
+
 .logo-text {
 	font-size: 35px;
 	margin: 0;
@@ -249,6 +306,7 @@ body {
 .corp-name {
 	opacity: 0.35;
 	line-height: 1.36;
+  margin-top: auto;
 }
 
 /* Scan page */
@@ -356,12 +414,19 @@ body {
 
 /* filter box */
 .filter-box {
-  height: 128px; /* ngetest */
-  width: 100%;
-  overflow-y: visible; /* sudah di visible tp ttep kepotong */
+  height: 80px; /* ngetest */
+  position: relative;
+}
+.filter-placeholder {
+  height: 400px;
+  top: 0;
   overflow-x: scroll;
 }
 .filter-box::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+.filter-placeholder::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
@@ -370,6 +435,14 @@ body {
 .input-box {
   position: relative;
   height: 52px;
+}
+.filter-placeholder .input-box {
+  width: 33.3%;
+}
+@media screen and (max-width: 420px){
+  .filter-placeholder .input-box {
+    min-width: 110px;
+  }
 }
 .input-label {
   position: absolute;
@@ -389,6 +462,11 @@ body {
   height: 52px;
   min-width: 111px;
 }
+@media screen and (min-width: 421px){
+  .filter-placeholder .nice-select {
+    width: 100%;
+  }
+}
 .nice-select::after {
   background-image: url(img/shape.png);
   width: 11px;
@@ -406,6 +484,23 @@ body {
   -webkit-transform: rotate(-180deg) translate(2px, 2px);
   -ms-transform: rotate(-180deg) translate(2px, 2px);
   transform: rotate(-180deg) translate(2px, 2px);
+}
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+  background-color: #23252d;   
+}
+.nice-select .list {
+  border: 1px solid #424d7a;
+  width: 100%;
+}
+.nice-select .option {
+  background-color: #2f3449;
+  color: #fff;
+}
+.nice-select .option.selected {
+  font-family: "Inter-Bold", sans-serif;
+}
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color: #424d7a;
 }
 
 .employee-list {
@@ -478,13 +573,46 @@ body {
 .date-input {
   padding: 19px 20px;
 }
+.input-date-box {
+  position: relative;
+}
+.filter-placeholder .input-date-box{
+  width: 33.3%;
+}
+@media screen and (max-width: 420px){
+  .filter-placeholder .input-date-box{
+    min-width: 110px;
+    margin-right: 15px !important;
+  }
+}
+@media screen and (min-width: 421px){
+  .filter-placeholder .date-box {
+    width: 100%;
+  }
+}
+.input-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
+  top: 60px !important;
+  right: -10px !important;
+  padding: 5px 10px;
+  background-color: #2f3449;
+  width: 15rem;
+}
+.input-date-box .dropdown-menu {
+  color: #fff;
+}
+.input-date-box .table th, 
+.input-date-box .table td {
+  border-top: 1px solid rgba(255,255,255, 0.2);
+}
+.input-date-box .table thead th {
+  border-bottom: 2px solid #999;
+}
 .date-box {
   background: #2f3449;
   border: none;
   border: 1px solid #424d7a;
   padding-top: 12px;
   height: 52px;
-  min-width: 111px;
   position: relative;
   padding-left: 17px;
   width: 153px;
@@ -509,6 +637,7 @@ body {
   margin-top: 9px;
   padding-left: 2px;
   border:none;
+  width: 100%;
 }
 .date-box input[type="text"]:focus {
   outline: none;
@@ -525,8 +654,19 @@ body {
 }
 .date-input .date-box {
   width: 165px;
+  width: 100%;
 }
-
+.date-input .input-date-box {
+  width: 80%;
+}
+.date-input .input-date-box:first-child {
+  margin-left: auto;
+  padding-right: 10px;
+}
+.date-input .input-date-box:last-child {
+  margin-right: auto;
+  padding-left: 10px;
+}
 
 /* content */
 .content {
@@ -566,9 +706,13 @@ body {
   width: 200px;
   padding-top: 20px;
 }
+.category-legend ul {
+  padding-left: 0;
+}
 .category-legend ul li{
   font-size: 14px;
   margin: 6.5px 0;
+  list-style: none;
 }
 .category-legend ul li span{
   display: inline-block;
